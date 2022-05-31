@@ -6,7 +6,7 @@
  * \*
  * \* Description: Домашнее задание к занятию 1.4 Коллекции для параллельной (конкурирующей) работы.
  * \*
- * \* Задача: 1. Колл-центр
+ * \* Задача: 1.Колл-центр
  * \
  */
 public class Main {
@@ -18,7 +18,6 @@ public class Main {
         for (int i = 1; i <= CALLS; i++) {
             new Thread(null, center::call, "№ " + i).start();
         }
-
         for (int i = 1; i <= SPECIALISTS; i++) {
             new Thread(null, center::takeTheCall, "№ " + i).start();
         }
