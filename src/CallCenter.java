@@ -24,8 +24,9 @@ public class CallCenter {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            if (phoneCalls.poll() != null) {
-                System.out.println("Специалист " + Thread.currentThread().getName() + " ответил на звонок " + phoneCalls.poll());
+            String answer = phoneCalls.poll();
+            if (answer != null) {
+                System.out.println("Специалист " + Thread.currentThread().getName() + " ответил на звонок " + answer);
             }
 
         }
